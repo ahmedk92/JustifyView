@@ -34,7 +34,7 @@ class JustifyView: UIView {
         var lastLine: [UIView] = []
         
         for view in views {
-            if x + view.bounds.width >= bounds.width {
+            if x + view.bounds.width > bounds.width {
                 justify(lastLine)
                 lastLine = []
                 x = 0
