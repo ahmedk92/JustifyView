@@ -8,16 +8,10 @@
 
 import UIKit
 
-fileprivate class DummyView: UIView {
-    override var intrinsicContentSize: CGSize {
-        return bounds.size
-    }
-}
-
 fileprivate let VIEW_HEIGHT: CGFloat = 44
 
 fileprivate func makeView(ofWidth width: CGFloat, in superview: UIView) -> UIView {
-    let view = DummyView(frame: CGRect(x: 0, y: 0, width: width, height: VIEW_HEIGHT))
+    let view = UIView(frame: CGRect(x: 0, y: 0, width: width, height: VIEW_HEIGHT))
     view.backgroundColor = .green
     view.layer.borderWidth = 1
     view.layer.borderColor = UIColor.black.cgColor
